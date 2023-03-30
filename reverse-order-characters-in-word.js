@@ -39,3 +39,17 @@ function reverseWords(s) {
   }
   return reverseArr.join(" ");
 }
+//3-way with map()
+function reverseWords(s) {
+  return s
+    .split(" ")
+    .map((word) => {
+      return word
+        .split("")
+        .map((letter, index, arr) => {
+          return arr[arr.length - 1 - index];
+        })
+        .join("");
+    })
+    .join(" ");
+}
