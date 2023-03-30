@@ -24,6 +24,7 @@ function reverseWords(s) {
   }
   return newString.split(" ").reverse().join(" ");
 }
+
 //2-way
 function reverseWords(s) {
   const arr = s.split(" ");
@@ -39,6 +40,7 @@ function reverseWords(s) {
   }
   return reverseArr.join(" ");
 }
+
 //3-way with map()
 function reverseWords(s) {
   return s
@@ -50,6 +52,16 @@ function reverseWords(s) {
           return arr[arr.length - 1 - index];
         })
         .join("");
+    })
+    .join(" ");
+}
+
+//4-way with reverse()
+function reverseWords(s) {
+  return s
+    .split(" ")
+    .map((word) => {
+      return word.split("").reverse().join("");
     })
     .join(" ");
 }
