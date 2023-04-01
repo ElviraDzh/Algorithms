@@ -17,51 +17,54 @@
 // ArrayUtil.fill([1, 2, 3], 0); // [0, 0, 0]
 
 //  Implement ArrayUtil, without using built-in methods.
-function max(array) {
-  let maxNum = array[0];
 
-  for (let i = 1; i < array.length; i++) {
-    if (maxNum < array[i]) {
-      maxNum = array[i];
+const ArrayUtil = {
+  max: function (array) {
+    let maxNum = array[0];
+
+    for (let i = 1; i < array.length; i++) {
+      if (maxNum < array[i]) {
+        maxNum = array[i];
+      }
     }
-  }
-  return maxNum;
-}
+    return maxNum;
+  },
 
-function min(array) {
-  let minNum = array[0];
+  min: function (array) {
+    let minNum = array[0];
 
-  for (let i = 1; i < array.length; i++) {
-    if (minNum > array[i]) {
-      minNum = array[i];
+    for (let i = 1; i < array.length; i++) {
+      if (minNum > array[i]) {
+        minNum = array[i];
+      }
     }
-  }
-  return minNum;
-}
+    return minNum;
+  },
 
-function average(array) {
-  let total = 0;
+  avr: function (array) {
+    let total = 0;
 
-  for (let i = 0; i < array.length; i++) {
-    total += array[i];
-  }
-  return total / array.length;
-}
+    for (let i = 0; i < array.length; i++) {
+      total += array[i];
+    }
+    return total / array.length;
+  },
 
-function total(array) {
-  let total = 0;
+  total: function (array) {
+    let total = 0;
 
-  for (let i = 0; i < array.length; i++) {
-    total += array[i];
-  }
-  return total;
-}
+    for (let i = 0; i < array.length; i++) {
+      total += array[i];
+    }
+    return total;
+  },
 
-function reverse(array) {
-  const newArr = [];
+  reverse: function (array) {
+    const newArr = [];
 
-  for (let i = array.length - 1; i >= 0; i--) {
-    newArr.push(array[i]);
-  }
-  return newArr;
-}
+    for (let i = array.length - 1; i >= 0; i--) {
+      newArr.push(array[i]);
+    }
+    return newArr;
+  },
+};
