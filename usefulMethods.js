@@ -27,3 +27,14 @@ function max(array) {
   }
   return maxNum;
 }
+
+function min(array) {
+  let minNum = array[0];
+
+  for (let i = 1; i < array.length; i++) {
+    if (minNum > array[i]) {
+      minNum = array[i];
+    }
+  }
+  return minNum;
+}
