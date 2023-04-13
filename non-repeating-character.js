@@ -13,6 +13,7 @@
 // Input: s = "aabbaaa"
 // Output: -1
 
+//#1 solve problem
 function firstUniqChar(s) {
   for (let i = 0; i < s.length; i++) {
     let found = false;
@@ -25,5 +26,16 @@ function firstUniqChar(s) {
     if (!found) return i;
   }
 
+  return -1;
+}
+
+//#2 solve problem
+
+function firstUniqChar(s) {
+  for (i = 0; i < s.length; i++) {
+    if (s.indexOf(s[i]) === s.lastIndexOf(s[i])) {
+      return i;
+    }
+  }
   return -1;
 }
